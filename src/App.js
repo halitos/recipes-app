@@ -11,22 +11,22 @@ function App() {
   const [query, setQuery] = useState("chicken");
 
   useEffect(() => {
-    getRecipes();
+    // getRecipes();
+
+    fetch(
+      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    )
+      .then((res) => res.json())
+      .then((data) => setRecipes(data.hits));
   }, [query]);
 
-  const getRecipes = async () => {
-    const response = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
-    );
-    const data = await response.json();
-    setRecipes(data.hits);
-
-    // fetch(
-    //   `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => setRecipes(data.hits));
-  };
+  // const getRecipes = async () => {
+  //   const response = await fetch(
+  //     `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+  //   );
+  //   const data = await response.json();
+  //   setRecipes(data.hits);
+  // }
 
   function updateSearch(e) {
     setSearch(e.target.value);
