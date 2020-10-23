@@ -51,10 +51,10 @@ function App() {
         </button>
       </form>
       <div className="recipes">
-        {recipes.map((recipe, index) => (
+        {recipes.map((r, index) => (
           <Recipes
             key={index}
-            {...recipe}
+            {...r.recipe}
           />
         ))}
       </div>
