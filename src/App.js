@@ -11,7 +11,6 @@ function App() {
   const [query, setQuery] = useState("chicken");
 
   useEffect(() => {
-    // getRecipes();
 
     fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
@@ -52,13 +51,10 @@ function App() {
         </button>
       </form>
       <div className="recipes">
-        {recipes.map((r, index) => (
+        {recipes.map((recipe, index) => (
           <Recipes
             key={index}
-            title={r.recipe.label}
-            calories={r.recipe.calories}
-            image={r.recipe.image}
-            ingredients={r.recipe.ingredients}
+            {...recipe}
           />
         ))}
       </div>
