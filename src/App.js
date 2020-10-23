@@ -16,7 +16,9 @@ function App() {
       `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
     )
       .then((res) => res.json())
-      .then((data) => setRecipes(data.hits));
+      .then((data) =>{
+        setRecipes(data.hits);
+      })
   }, [query]);
 
   // const getRecipes = async () => {
