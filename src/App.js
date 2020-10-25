@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Recipes from "./Recipes";
+import SelectButtons from "./SelectButtons";
 
 function App() {
   const APP_ID = "b7209b0e";
@@ -8,7 +9,7 @@ function App() {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("leaf");
 
   useEffect(() => {
 
@@ -31,6 +32,10 @@ function App() {
     setSearch("");
   };
 
+  const changeSelect = (newSelection) => {
+    setQuery(newSelection)
+  }
+
   return (
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
@@ -44,6 +49,7 @@ function App() {
           Search
         </button>
       </form>
+      <SelectButtons  changeSelect={changeSelect} />
       <div className="recipes">
         {recipes.map((r, index) => (
           <Recipes
