@@ -11,7 +11,7 @@
 }
 
 .search-bar {
-  width: 50%;
+  width: 40%;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -46,4 +46,14 @@
 .btn-container {
   display: flex;
   justify-content: space-around;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#edamam-badge {
+  float: right;
 }

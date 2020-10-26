@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./Header";
 import Recipes from "./Recipes";
 import SelectButtons from "./SelectButtons";
 
@@ -38,17 +39,20 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          type="text"
-          className="search-bar"
-          value={search} // works wo this
-          onChange={updateSearch}
-        ></input>
-        <button type="submit" className="search-button">
-          Search
-        </button>
-      </form>
+    <Header/>
+      <div>
+        <form onSubmit={getSearch} className="search-form">
+          <input
+            type="text"
+            className="search-bar"
+            value={search} // works wo this
+            onChange={updateSearch}
+          ></input>
+          <button type="submit" className="search-button">
+            Search
+          </button>
+        </form>
+      </div>
       <SelectButtons  changeSelect={changeSelect} />
       <div className="recipes">
         {recipes.map((r, index) => (
