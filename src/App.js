@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Header from "./Header";
-import Recipes from "./Recipes";
-import SelectButtons from "./SelectButtons";
+import Header from "./Components/Header";
+import Recipes from "./Components/Recipes";
+import SelectButtons from "./Components/SelectButtons";
 
 function App() {
   const APP_ID = "b7209b0e";

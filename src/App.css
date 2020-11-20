@@ -32,7 +32,7 @@
   flex-wrap: wrap;
 }
 
-.select-btn {
+/* .select-btn {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -46,14 +46,14 @@
 .btn-container {
   display: flex;
   justify-content: space-around;
-}
+} */
 
-.header {
+/* .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #edamam-badge {
   float: right;
-}
+} */
