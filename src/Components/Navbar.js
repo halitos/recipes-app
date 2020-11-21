@@ -1,11 +1,12 @@
 import React from 'react'
-import "./header.css"
+import { Link } from "react-router-dom";
+import "./navbar.css"
 
-export default function Header() {
+export default function Navbar() {
     return (
         <div className="header">
             <div className="my-logo">
-                <button>My Logo/Home</button>
+            <Link to="/"><button>Logo/Home</button></Link>          
             </div>
             <h1>Awesome Recepies</h1>
             <div id="edamam-badge" ></div>

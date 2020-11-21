@@ -1,16 +1,14 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./selectBtn.css"
 
 export default function SelectButtons( {changeSelect}) {
-const [selectedFood, setSelectedFood] = useState("")
+
 
 const selection1 = ["veggie", "rice", "banana"]
 const selection2 = [ "beef", "lamb", "chicken"]
 
-const handleClick = (e) => {
-setSelectedFood(e.target.value)  
+const handleClick = (e) => {  
 changeSelect(e.target.value)
-console.log(selectedFood);
 }
 
 

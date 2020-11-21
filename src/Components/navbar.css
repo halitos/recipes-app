@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#edamam-badge {
+  float: right;
+}
+
+button {
+  font-weight: 700;
+  height: 2rem;
+  background: rgb(6, 24, 73);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}

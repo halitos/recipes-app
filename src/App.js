@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+import SingleRecipe from "./Components/SingleRecipe"
 import "./App.css";
-import Header from "./Components/Header";
-import Recipes from "./Components/Recipes";
+import Navbar from "./Components/Navbar";
+import RecipesDisplay from "./Components/RecipesDisplay";
+import Search from "./Components/Search";
 import SelectButtons from "./Components/SelectButtons";
 
 function App() {
   const APP_ID = "b7209b0e";
   const APP_KEY = "4e8a7cb90bde763a0a9c11098a3a4123";
-
   const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("");
   const [query, setQuery] = useState("patlican");
 
   useEffect(() => {
@@ -23,45 +28,30 @@ function App() {
       })
   }, [query]);
 
-  function updateSearch(e) {
-    setSearch(e.target.value);
+  const changeSelect = (newSelection) => {
+    setQuery(newSelection)
   }
 
-  const getSearch = (e) => {
-    e.preventDefault();
-    setQuery(search);
-    setSearch("");
-  };
-
-  const changeSelect = (newSelection) => {
+  const changeSearch = (newSelection) => {
     setQuery(newSelection)
   }
 
   return (
     <div className="App">
-    <Header/>
-      <div>
-        <form onSubmit={getSearch} className="search-form">
-          <input
-            type="text"
-            className="search-bar"
-            value={search} // works wo this
-            onChange={updateSearch}
-          ></input>
-          <button type="submit" className="search-button">
-            Search
-          </button>
-        </form>
-      </div>
-      <SelectButtons  changeSelect={changeSelect} />
-      <div className="recipes">
-        {recipes.map((r, index) => (
-          <Recipes
-            key={index}
-            {...r.recipe}
-          />
-        ))}
-      </div>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route exact path="/">
+          <Search changeSearch={changeSearch}/>
+          <SelectButtons  changeSelect={changeSelect} />
+          <RecipesDisplay recipes={recipes}/>
+        </Route>
+        <Route exact path="/select">
+          <SingleRecipe recipes={recipes}/>
+        </Route>
+      </Switch>
+    </Router>
+
     </div>
   );
 }
