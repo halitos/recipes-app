@@ -1,0 +1,22 @@
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 40%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-button {
+  background: rgb(74, 15, 114);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  margin-left: 5px;
+}

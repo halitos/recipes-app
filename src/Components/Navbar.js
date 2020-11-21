@@ -5,9 +5,9 @@ import "./navbar.css"
 export default function Navbar() {
     return (
         <div className="header">
-            <div className="my-logo">
-            <Link to="/"><button>Logo/Home</button></Link>          
-            </div>
+            <Link to="/">      
+            <button>My Logo/Home</button>         
+            </Link>
             <h1>Awesome Recepies</h1>
             <div id="edamam-badge" ></div>
         </div>

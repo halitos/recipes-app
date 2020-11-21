@@ -9,6 +9,7 @@
 }
 
 button {
+  cursor: pointer;
   font-weight: 700;
   height: 2rem;
   background: rgb(6, 24, 73);
