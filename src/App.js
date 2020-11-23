@@ -10,10 +10,9 @@ import Navbar from "./Components/Navbar";
 import RecipesDisplay from "./Components/RecipesDisplay";
 import Search from "./Components/Search";
 import SelectButtons from "./Components/SelectButtons";
+import {APP_ID, APP_KEY} from "./credits.json"
 
 function App() {
-  const APP_ID = "b7209b0e";
-  const APP_KEY = "4e8a7cb90bde763a0a9c11098a3a4123";
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("patlican");
 
@@ -42,8 +41,10 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/">
-          <Search changeSearch={changeSearch}/>
+          <div className="main-sec">
           <SelectButtons  changeSelect={changeSelect} />
+          <Search changeSearch={changeSearch}/>
+          </div>
           <RecipesDisplay recipes={recipes}/>
         </Route>
         <Route exact path="/select">

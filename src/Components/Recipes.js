@@ -9,11 +9,11 @@ const Recipes = ({ label, calories, image, ingredients }) => {
         <h3>{label}</h3>      
         <p>Calories: {Math.round(calories)}</p>
         <img src={image} alt="dish" />
-        <ul>
+        {/* <ul>
           {ingredients.map((i, index) => (
             <li key={index}>{i.text}</li>
           ))}
-        </ul>
+        </ul> */}
       </div>
       </Link>
   );

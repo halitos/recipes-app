@@ -18,17 +18,21 @@ import "./search.css"
       };
 
     return (
-      <div>
+      <div className="search-container">
+        <div className="search-text">
+          <p>You can select recipes by quick access buttons</p>
+          <p>Or enter main ingredient as key word to search for awesome recipes</p>        
+        </div>   
         <form onSubmit={getSearch} className="search-form">
-          <input
-            type="text"
-            className="search-bar"
-            value={search} // works wo this
-            onChange={updateSearch}
-          ></input>
-          <button type="submit" className="search-button">
-            Search
-          </button>
+            <input
+              type="text"
+              className="search-bar"
+              value={search} // works wo this
+              onChange={updateSearch}
+            ></input>
+            <button type="submit" className="search-button">
+              Search
+            </button>
         </form>
       </div>
     )
