@@ -20,8 +20,8 @@ import "./search.css"
     return (
       <div className="search-container">
         <div className="search-text">
-          <p>You can select recipes by quick access buttons</p>
-          <p>Or enter main ingredient as key word to search for awesome recipes</p>        
+          <p>Select recipes by quick access buttons</p>
+          <p>Or enter main ingredient as key word to search</p>        
         </div>   
         <form onSubmit={getSearch} className="search-form">
             <input

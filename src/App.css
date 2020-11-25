@@ -17,6 +17,6 @@
 .main-sec {
   display: flex;
   justify-content: space-around;
-  margin: 20px 10px;
+  margin: 20px 20px;
   flex-wrap: wrap;
 }

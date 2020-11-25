@@ -1,0 +1,19 @@
+.single-recipe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  margin: 10px 40px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box1,
+.box2 {
+  padding: 30px;
+}

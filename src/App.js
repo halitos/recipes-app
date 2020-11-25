@@ -42,8 +42,8 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="main-sec">
-          <SelectButtons  changeSelect={changeSelect} />
-          <Search changeSearch={changeSearch}/>
+            <SelectButtons  changeSelect={changeSelect} />
+            <Search changeSearch={changeSearch}/>
           </div>
           <RecipesDisplay recipes={recipes}/>
         </Route>
