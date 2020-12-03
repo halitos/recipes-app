@@ -3,12 +3,13 @@ import HealthLabels from "./HealthLabels"
 import "./singleRecipe.css"
 
 
-const SingleRecipe = ({recipes}) => {
+const SingleRecipe = ({recipes, id}) => {
     return (
         <div className="single-recipe">
           <div className="box1">
             <h3>{recipes[0].recipe.label}</h3>
             <p>Calories: {Math.round(recipes[0].recipe.calories)}</p>
+            <p>{id}</p>
             <img src={recipes[0].recipe.image} alt="dish" />
           </div>
           <div className="box2">

@@ -7,6 +7,7 @@ const RecipesDisplay = ({recipes}) => {
         {recipes.map((r, index) => (
           <Recipes
             key={index}
+            id={index}
             {...r.recipe}
           />
         ))}
