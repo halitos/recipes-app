@@ -1,17 +1,27 @@
 .select-btn {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 0px;
+  width: 5rem;
+  height: 3rem;
+  border: 1px white;
   background: rgb(74, 15, 114);
-  font-size: x-large;
+  font-size: large;
   color: aliceblue;
   cursor: pointer;
-  margin-left: 5px;
+  margin: 0px 0px 1rem 1rem;
 }
 
 .btn-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1000px) {
+  .btn-main {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .btn-main {
+    margin-right: 2rem;
+  }
 }

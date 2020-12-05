@@ -10,7 +10,7 @@ export default function Navbar() {
             <button><Home/></button>         
             </Link>
             <h1>Awesome Recepies</h1>
-            <div id="edamam-badge" ></div>
+            <div className="badge" id="edamam-badge" ></div>
         </div>
     )
 }

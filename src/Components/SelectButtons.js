@@ -4,7 +4,9 @@ import "./selectBtn.css"
 export default function SelectButtons( {changeSelect}) {
 
 
-const selection = ["veggie", "rice", "beef", "fish"]
+const selection1 = ["veggie", "rice", "pasta"]
+const selection2 = [ "fish", "salad", "beef"]
+
 
 const handleClick = (e) => {  
 changeSelect(e.target.value)
@@ -12,10 +14,18 @@ changeSelect(e.target.value)
 
 
 return (
-    <div className="btn-container">
-            {selection.map((sel, index) =>{
+    <div className="btn-main">
+        <div className="btn-container">
+            {selection1.map((sel, index) =>{
             return <button key={index} className="select-btn" onClick={handleClick} type="text" value={sel}>{sel}</button>
             })}  
+        </div>
+        <div className="btn-container">
+                {selection2.map((sel, index) =>{
+                return <button key={index} className="select-btn" onClick={handleClick} type="text" value={sel}>{sel}</button>
+                })}  
+        </div>
     </div>
+
     )
 }
