@@ -1,10 +1,15 @@
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 button {

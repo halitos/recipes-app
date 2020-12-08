@@ -17,3 +17,10 @@
 .box2 {
   padding: 30px;
 }
+
+.home-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 4rem;
+}

@@ -17,7 +17,7 @@
 }
 
 .search-bar {
-  height: 2.8rem;
+  height: 2.5rem;
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -28,14 +28,17 @@
   background: rgb(74, 15, 114);
   border-radius: 5px;
   color: white;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   width: 5rem;
   height: 3rem;
   font-size: large;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 840px) {
   .search-container {
     margin-top: 0px;
+  }
+  .search-bar {
+    width: 75%;
   }
 }
