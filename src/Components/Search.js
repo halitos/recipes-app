@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./search.css";
+import * as css from "./search.module.css";
 
 const Search = ({ changeSearch }) => {
   const [query, setQuery] = useState("");
@@ -22,19 +22,19 @@ const Search = ({ changeSearch }) => {
   };
 
   return (
-    <div className="search-container">
-      <div className="search-text">
+    <div className={css.main}>
+      <div className={css.div}>
         <p>Select recipes by quick access buttons</p>
         <p>Or enter main ingredient as key word to search</p>
       </div>
-      <form onSubmit={getSearch} className="search-form">
+      <form onSubmit={getSearch} className={css.form}>
         <input
           type="text"
-          className="search-bar"
+          className={css.input}
           value={search} // works wo this
           onChange={updateSearch}
         ></input>
-        <button type="submit" className="search-button">
+        <button type="submit" className={css.button}>
           Search
         </button>
       </form>

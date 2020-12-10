@@ -1,4 +1,4 @@
-.search-container {
+.main {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -6,17 +6,17 @@
   margin-top: 20px;
 }
 
-.search-text {
+.div {
   font-weight: 500;
 }
 
-.search-form {
+.form {
   min-height: 15vh;
   display: flex;
   align-items: center;
 }
 
-.search-bar {
+.input {
   height: 2.5rem;
   width: 100%;
   border: none;
@@ -24,21 +24,24 @@
   color: black;
 }
 
-.search-button {
+button {
   background: rgb(74, 15, 114);
+  color: aliceblue;
   border-radius: 5px;
   color: white;
   margin-left: 1.5rem;
   width: 5rem;
   height: 3rem;
+  border: 1px white;
   font-size: large;
+  cursor: pointer;
 }
 
 @media (min-width: 840px) {
-  .search-container {
+  .main {
     margin-top: 0px;
   }
-  .search-bar {
+  .input {
     width: 75%;
   }
 }

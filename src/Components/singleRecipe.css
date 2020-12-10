@@ -19,8 +19,14 @@
 }
 
 .home-btn {
+  cursor: pointer;
+  background: rgb(74, 15, 114);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 4rem;
+  height: 3rem;
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 4rem;
 }
